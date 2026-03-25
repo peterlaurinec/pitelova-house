@@ -441,6 +441,39 @@
             }
         }
 
+        /* Video item in grid */
+        .gallery-item.video-item {
+            cursor: default;
+        }
+
+        .gallery-item.video-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .gallery-item.video-item:hover img,
+        .gallery-item.video-item:hover video {
+            transform: none;
+        }
+
+        .video-play-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            pointer-events: none;
+            z-index: 2;
+        }
+
         /* Loading animation */
         .gallery-item img {
             animation: fadeIn 0.6s ease;
@@ -453,6 +486,7 @@
         <ul>
             <li><a href="#exterior">Exterior</a></li>
             <li><a href="#garden">Garden & Pool</a></li>
+            <li><a href="#summerhouse">Summer House</a></li>
             <li><a href="#living">Living Areas</a></li>
             <li><a href="#bedrooms">Bedrooms</a></li>
             <li><a href="#bathrooms">Bathrooms</a></li>
@@ -515,9 +549,43 @@
                 <img src="thumbs/IMG_6246.jpg" alt="Swimming Pool" loading="lazy">
                 <div class="gallery-label">Swimming Pool</div>
             </div>
+            <div class="gallery-item video-item">
+                <video autoplay muted loop playsinline poster="videos/garden-pool-poster.jpg">
+                    <source src="videos/garden-pool.mp4" type="video/mp4">
+                </video>
+                <span class="video-play-badge">VIDEO</span>
+                <div class="gallery-label">Garden & Pool Tour</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summer House Section -->
+    <section id="summerhouse" class="container">
+        <h2>Summer House</h2>
+        <div class="gallery-grid">
             <div class="gallery-item" onclick="openLightbox(9)">
                 <img src="thumbs/IMG_6253.jpg" alt="Patio" loading="lazy">
                 <div class="gallery-label">Patio</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(10)">
+                <img src="thumbs/IMG_6251.jpg" alt="Summer Kitchen" loading="lazy">
+                <div class="gallery-label">Summer Kitchen</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(11)">
+                <img src="thumbs/IMG_6250.jpg" alt="Den" loading="lazy">
+                <div class="gallery-label">Den</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(12)">
+                <img src="thumbs/IMG_6249.jpg" alt="Attic Loft" loading="lazy">
+                <div class="gallery-label">Attic Loft</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(13)">
+                <img src="thumbs/IMG_6248.jpg" alt="Hallway & Stairs" loading="lazy">
+                <div class="gallery-label">Hallway & Stairs</div>
+            </div>
+            <div class="gallery-item" onclick="openLightbox(14)">
+                <img src="thumbs/IMG_6265.jpg" alt="Staircase" loading="lazy">
+                <div class="gallery-label">Staircase</div>
             </div>
         </div>
     </section>
@@ -526,25 +594,17 @@
     <section id="living" class="container">
         <h2>Living Areas</h2>
         <div class="gallery-grid">
-            <div class="gallery-item" onclick="openLightbox(10)">
+            <div class="gallery-item" onclick="openLightbox(15)">
                 <img src="thumbs/IMG_6256.jpg" alt="Living & Dining Room" loading="lazy">
                 <div class="gallery-label">Living & Dining Room</div>
             </div>
-            <div class="gallery-item" onclick="openLightbox(11)">
+            <div class="gallery-item" onclick="openLightbox(16)">
                 <img src="thumbs/IMG_6258.jpg" alt="Living Room" loading="lazy">
                 <div class="gallery-label">Living Room</div>
             </div>
-            <div class="gallery-item" onclick="openLightbox(12)">
+            <div class="gallery-item" onclick="openLightbox(17)">
                 <img src="thumbs/IMG_6257.jpg" alt="Kitchen" loading="lazy">
                 <div class="gallery-label">Kitchen</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(13)">
-                <img src="thumbs/IMG_6251.jpg" alt="Summer Kitchen" loading="lazy">
-                <div class="gallery-label">Summer Kitchen</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(14)">
-                <img src="thumbs/IMG_6250.jpg" alt="Den" loading="lazy">
-                <div class="gallery-label">Den</div>
             </div>
         </div>
     </section>
@@ -553,29 +613,21 @@
     <section id="bedrooms" class="container">
         <h2>Bedrooms</h2>
         <div class="gallery-grid">
-            <div class="gallery-item" onclick="openLightbox(15)">
+            <div class="gallery-item" onclick="openLightbox(18)">
                 <img src="thumbs/IMG_6260.jpg" alt="Master Bedroom" loading="lazy">
                 <div class="gallery-label">Master Bedroom</div>
             </div>
-            <div class="gallery-item" onclick="openLightbox(16)">
+            <div class="gallery-item" onclick="openLightbox(19)">
                 <img src="thumbs/IMG_6262.jpg" alt="Bedroom" loading="lazy">
                 <div class="gallery-label">Bedroom</div>
             </div>
-            <div class="gallery-item" onclick="openLightbox(17)">
+            <div class="gallery-item" onclick="openLightbox(20)">
                 <img src="thumbs/IMG_6261.jpg" alt="Children's Room" loading="lazy">
                 <div class="gallery-label">Children's Room</div>
             </div>
-            <div class="gallery-item" onclick="openLightbox(18)">
+            <div class="gallery-item" onclick="openLightbox(21)">
                 <img src="thumbs/IMG_6259.jpg" alt="Guest Room" loading="lazy">
                 <div class="gallery-label">Guest Room</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(19)">
-                <img src="thumbs/IMG_6249.jpg" alt="Attic Loft" loading="lazy">
-                <div class="gallery-label">Attic Loft</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(20)">
-                <img src="thumbs/IMG_6248.jpg" alt="Hallway & Stairs" loading="lazy">
-                <div class="gallery-label">Hallway & Stairs</div>
             </div>
         </div>
     </section>
@@ -584,21 +636,17 @@
     <section id="bathrooms" class="container">
         <h2>Bathrooms</h2>
         <div class="gallery-grid">
-            <div class="gallery-item" onclick="openLightbox(21)">
+            <div class="gallery-item" onclick="openLightbox(22)">
                 <img src="thumbs/IMG_6252.jpg" alt="Bathroom" loading="lazy">
                 <div class="gallery-label">Bathroom</div>
             </div>
-            <div class="gallery-item" onclick="openLightbox(22)">
+            <div class="gallery-item" onclick="openLightbox(23)">
                 <img src="thumbs/IMG_6263.jpg" alt="Main Bathroom" loading="lazy">
                 <div class="gallery-label">Main Bathroom</div>
             </div>
-            <div class="gallery-item" onclick="openLightbox(23)">
+            <div class="gallery-item" onclick="openLightbox(24)">
                 <img src="thumbs/IMG_6264.jpg" alt="Laundry Room" loading="lazy">
                 <div class="gallery-label">Laundry Room</div>
-            </div>
-            <div class="gallery-item" onclick="openLightbox(24)">
-                <img src="thumbs/IMG_6265.jpg" alt="Staircase" loading="lazy">
-                <div class="gallery-label">Staircase</div>
             </div>
         </div>
     </section>
@@ -641,31 +689,37 @@
     <script>
         // Gallery images data
         const galleryImages = [
+            // Exterior & Entrance (0-4)
             { full: 'images/IMG_6247.jpg', label: 'House Front' },
             { full: 'images/IMG_6254.jpg', label: 'Driveway & Carport' },
             { full: 'images/IMG_6255.jpg', label: 'Entrance' },
             { full: 'images/IMG_6240.jpg', label: 'Outbuilding' },
             { full: 'images/IMG_6241.jpg', label: 'Greenhouse' },
+            // Garden & Pool (5-8)
             { full: 'images/IMG_6245.jpg', label: 'Garden Overview' },
             { full: 'images/IMG_6243.jpg', label: 'Garden' },
             { full: 'images/IMG_6244.jpg', label: 'Garden Pond' },
             { full: 'images/IMG_6246.jpg', label: 'Swimming Pool' },
+            // Summer House (9-14)
             { full: 'images/IMG_6253.jpg', label: 'Patio' },
+            { full: 'images/IMG_6251.jpg', label: 'Summer Kitchen' },
+            { full: 'images/IMG_6250.jpg', label: 'Den' },
+            { full: 'images/IMG_6249.jpg', label: 'Attic Loft' },
+            { full: 'images/IMG_6248.jpg', label: 'Hallway & Stairs' },
+            { full: 'images/IMG_6265.jpg', label: 'Staircase' },
+            // Living Areas (15-17)
             { full: 'images/IMG_6256.jpg', label: 'Living & Dining Room' },
             { full: 'images/IMG_6258.jpg', label: 'Living Room' },
             { full: 'images/IMG_6257.jpg', label: 'Kitchen' },
-            { full: 'images/IMG_6251.jpg', label: 'Summer Kitchen' },
-            { full: 'images/IMG_6250.jpg', label: 'Den' },
+            // Bedrooms (18-21)
             { full: 'images/IMG_6260.jpg', label: 'Master Bedroom' },
             { full: 'images/IMG_6262.jpg', label: 'Bedroom' },
             { full: 'images/IMG_6261.jpg', label: 'Children\'s Room' },
             { full: 'images/IMG_6259.jpg', label: 'Guest Room' },
-            { full: 'images/IMG_6249.jpg', label: 'Attic Loft' },
-            { full: 'images/IMG_6248.jpg', label: 'Hallway & Stairs' },
+            // Bathrooms (22-24)
             { full: 'images/IMG_6252.jpg', label: 'Bathroom' },
             { full: 'images/IMG_6263.jpg', label: 'Main Bathroom' },
-            { full: 'images/IMG_6264.jpg', label: 'Laundry Room' },
-            { full: 'images/IMG_6265.jpg', label: 'Staircase' }
+            { full: 'images/IMG_6264.jpg', label: 'Laundry Room' }
         ];
 
         let currentImageIndex = 0;
