@@ -443,7 +443,7 @@
 
         /* Video item in grid */
         .gallery-item.video-item {
-            cursor: default;
+            cursor: pointer;
         }
 
         .gallery-item.video-item video {
@@ -472,6 +472,54 @@
             letter-spacing: 0.5px;
             pointer-events: none;
             z-index: 2;
+        }
+
+        /* Video Lightbox */
+        .video-lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 200;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-lightbox.active {
+            display: flex;
+        }
+
+        .video-lightbox video {
+            max-width: 90vw;
+            max-height: 85vh;
+            border-radius: 8px;
+            animation: zoomIn 0.3s ease;
+        }
+
+        .video-lightbox .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            font-weight: 300;
+            cursor: pointer;
+            background: rgba(0, 0, 0, 0.3);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 201;
+        }
+
+        .video-lightbox .lightbox-close:hover {
+            background: rgba(0, 0, 0, 0.6);
         }
 
         /* Loading animation */
@@ -549,8 +597,8 @@
                 <img src="thumbs/IMG_6246.jpg" alt="Swimming Pool" loading="lazy">
                 <div class="gallery-label">Swimming Pool</div>
             </div>
-            <div class="gallery-item video-item">
-                <video autoplay muted loop playsinline poster="videos/garden-pool-poster.jpg">
+            <div class="gallery-item video-item" onclick="openVideoLightbox()">
+                <video autoplay muted loop playsinline controls poster="videos/garden-pool-poster.jpg">
                     <source src="videos/garden-pool.mp4" type="video/mp4">
                 </video>
                 <span class="video-play-badge">VIDEO</span>
@@ -684,6 +732,14 @@
             <button class="lightbox-nav lightbox-next" onclick="nextImage()">&gt;</button>
             <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
         </div>
+    </div>
+
+    <!-- Video Lightbox -->
+    <div id="video-lightbox" class="video-lightbox" onclick="if(event.target===this)closeVideoLightbox()">
+        <video id="video-lightbox-player" controls autoplay>
+            <source src="videos/garden-pool.mp4" type="video/mp4">
+        </video>
+        <span class="lightbox-close" onclick="closeVideoLightbox()">&times;</span>
     </div>
 
     <script>
