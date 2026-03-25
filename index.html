@@ -805,8 +805,32 @@
             document.getElementById('lightbox-image').src = galleryImages[currentImageIndex].full;
         }
 
+        // Video lightbox
+        function openVideoLightbox() {
+            const vl = document.getElementById('video-lightbox');
+            const vp = document.getElementById('video-lightbox-player');
+            vl.classList.add('active');
+            vp.currentTime = 0;
+            vp.play();
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoLightbox() {
+            const vl = document.getElementById('video-lightbox');
+            const vp = document.getElementById('video-lightbox-player');
+            vp.pause();
+            vl.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
         // Keyboard navigation
         document.addEventListener('keydown', (e) => {
+            const videoLightbox = document.getElementById('video-lightbox');
+            if (videoLightbox.classList.contains('active')) {
+                if (e.key === 'Escape') closeVideoLightbox();
+                return;
+            }
+
             const lightbox = document.getElementById('lightbox');
             if (!lightbox.classList.contains('active')) return;
 
